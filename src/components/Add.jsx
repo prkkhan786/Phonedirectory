@@ -12,8 +12,9 @@ class Add extends Component {
   }
   render() {
     return (
-      <div className="input-group mb-3 col-12 m-3">
-       <form>
+      <div className="col-12">
+      <div className="input-group mb-3 m-3">
+       <form style={{width:"40%"}}>
        <span>
        <input
           type="text"
@@ -42,7 +43,7 @@ class Add extends Component {
         
 
         
-         <button
+         <button style={{marginTop:"3%"}}
             className="btn btn-outline-secondary"
             type="button"
             id="button-addon1"
@@ -50,7 +51,9 @@ class Add extends Component {
           >
             Submit
           </button>
+          
           </form>
+      </div>
       </div>
     );
   }

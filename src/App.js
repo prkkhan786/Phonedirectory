@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Link,Redirect } from "react-router-dom";
 import Navigation from "./components/navigation";
 import Addbutton from "./components/addbutton";
 import Detailview from "./components/detailview";
@@ -32,6 +32,7 @@ class App extends Component {
   }
   componentDidMount()
   {
+    console.log("compoenent is mointerd")
 
   }
  
@@ -39,11 +40,19 @@ class App extends Component {
     e.preventDefault();
     var contact = [...this.state.contacts];
     contact.push(this.state.details);
+
     this.setState({
       contacts:contact
     })
 
-    alert("Succcesfully added contact");
+    
+
+    
+
+
+
+
+   
 
   }
   handldelete(val){
@@ -56,8 +65,12 @@ class App extends Component {
   }
   
   render() {
+
+    console.log(window.location.pathname)
+
     return (
-      <div className="App">
+      <div className="container-fluid">
+        <div className="row">
         <Navigation />
         <Switch>
           <Route
@@ -75,6 +88,8 @@ class App extends Component {
           </Route>
           
         </Switch>
+        </div>
+        
       </div>
     );
   }
